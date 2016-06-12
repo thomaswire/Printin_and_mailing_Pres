@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Printing and Mailing Cost Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Printing and Mailing Cost Calculator">
+  <meta name="author" content="Thomas Wire">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Printing and Mailing Cost Calculator</h1>
+    <h2>Pitch Presentation</h2>
+    <p>Thomas Wire<br/>Developing Data Products Course</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>About the Printing and Mailing Cost Calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Th Printing and Mailing Cost Calculator is a Shiny application that can be used to calculate the printing and mailing costs to be charged by the firm XYZ Mailings to mail a set of packages. </p>
+
+<p>Without having to manually reference the prices associated with printing and mailing, you can quickly and easily determine costs. The calculator is quick and reliable. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>How to Use the Calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>In the side panel to the left, select the envelope type (6x9 envelopes or #10 envelopes)</li>
+<li>Select the number of packages </li>
+<li>Select the number of additional pages. Note that &#39;additional pages&#39; are any pages in a package beyond the first page. So, the value for &#39;additional pages&#39; is calculated as the total number of pages minus the number of packages.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Rates Used by the Calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The following rates are used to make the calculation:</p>
+
+<ul>
+<li>For 6x9 envelopes, each package has a cost of $0.279, with $0.029 for each additional page</li>
+<li>For #10 envelopes, each package has a cost of $0.179, with $0.029 for each additional page</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>A Look Inside the Calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Let&#39;s look inside how the cost calculation executes by using an example. Suppose that the envelope type is 6x9 and that we need to calculate the cost for 1000 packages with 1000 additional pages. The calculator executes R code as follows:</p>
+
+<pre><code class="r">numPackages &lt;- 1000
+numAdditionalPages &lt;- 1000
+costForPackages &lt;- numPackages * 0.279
+costForAdditionalPages &lt;- (numAdditionalPages) * 0.029
+costForPackages + costForAdditionalPages
+</code></pre>
+
+<pre><code>## [1] 308
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='About the Printing and Mailing Cost Calculator'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='How to Use the Calculator'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Rates Used by the Calculator'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='A Look Inside the Calculator'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
